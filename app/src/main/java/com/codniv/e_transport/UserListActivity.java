@@ -38,20 +38,20 @@ public class UserListActivity extends AppCompatActivity {
         passengerList = (ArrayList) db.passengerDao().getAllPassenger();
         allUserList = (ArrayList) db.userDao().getAllUsers();
 
-        Button addUserButton = findViewById(R.id.user_activity_add_user_button);
-        addUserButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Passenger passenger = new Passenger(currentTime,1,2,"1:07",4.45,500d,"completed");
-                db.passengerDao().insertPassenger(passenger);
-                recreate();
-//                Intent intent = new Intent(this,UserListActivity.class);
-//                finish();
-//                startActivity(intent);
-
-                Log.i("db","inserted to db");
-            }
-        });
+//        Button addUserButton = findViewById(R.id.user_activity_add_user_button);
+//        addUserButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Passenger passenger = new Passenger(currentTime,1,2,"1:07",4.45,500d,"completed");
+//                db.passengerDao().insertPassenger(passenger);
+//                recreate();
+////                Intent intent = new Intent(this,UserListActivity.class);
+////                finish();
+////                startActivity(intent);
+//
+//                Log.i("db","inserted to db");
+//            }
+//        });
 
         PassengerRecyclerView = findViewById(R.id.user_list_recyclerView);
         PassengerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
